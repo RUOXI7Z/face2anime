@@ -30,7 +30,6 @@ def main(args):
     model = CycleGAN.load_from_checkpoint(
         args.checkpoint,
         strict=False,
-        training_config=None
     ).eval().to(device)
 
     with torch.inference_mode():
